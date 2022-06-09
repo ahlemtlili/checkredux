@@ -5,7 +5,7 @@ const initialState ={filterTask:"ALL", taskList:[{desc:"task1",id:0,isdone:true}
 ,{desc:"task3",id:2,isdone:true}
 ,{desc:"task4",id:3,isdone:false},
 {desc:"task5",id:4,isdone:true},
-{desc:"task3",id:5,isdone:true},
+{desc:"task6",id:5,isdone:true},
 ]}
 
 export const taskReducer = (state = initialState, { type, payload }) => {

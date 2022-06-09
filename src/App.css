@@ -8,3 +8,10 @@ body {
   background-image: url('https://previews.123rf.com/images/serezniy/serezniy1812/serezniy181214153/113135471-empty-to-do-list-and-computer-keyboard-on-grey-background.jpg');
 
 }
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+
+.titleapp {font-family: times, Times New Roman, times-roman, georgia, serif;
+  font-size: 60px;
+  line-height: 40px;
+  letter-spacing: -1px;color: #444;}
+

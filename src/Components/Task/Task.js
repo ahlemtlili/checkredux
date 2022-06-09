@@ -18,18 +18,26 @@ const Task = ({el}) => {
   return (
     <div className="list">
       {!editdesc ? (
-        <h3>{el.desc}</h3>
+        <div className="des"><h3   className={el.isdone ?"doneclass":"undoneclass"} style={{marginTop:"10px",fontSize:"30px" ,fontFamily: "Great Vibes,cursive"}}>{el.desc}</h3></div>
       ) : (
-        <input
-          type="text"
+        <div className="container">
+        <div>
+          <form>
+            <div className="omrs-input-group">
+              <label className="omrs-input-underlined">
+                <input          type="text"
           value={input}
-          onChange={(e) => setInput(e.target.value)}
-        ></input>
+          onChange={(e) => setInput(e.target.value)} />
+              </label></div></form>
+        </div>
+      </div>
+
       )}
+
       <div className="btns">
-      <button className="button-78" onClick={() => dispatch(deleteTask(el.id))}>delete</button>
-      <button className="button-78" onClick={handleClick}>{!editdesc ? "Edit" : "save"}</button>
-      <button className="button-78" onClick={()=>dispatch(isDone(el.id))}>{el.isdone?"Done":"Undone"}</button>
+      <button className="button-63" onClick={() => dispatch(deleteTask(el.id))}>Delete</button>
+      <button className="button-63" onClick={handleClick}>{!editdesc ? "Edit" : "Save"}</button>
+      <button className="button-63" onClick={()=>dispatch(isDone(el.id))}>{el.isdone?"Done":"Undone"}</button>
       </div>
     </div>
   );
